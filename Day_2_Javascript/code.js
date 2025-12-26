@@ -1,0 +1,1 @@
+// Today is Day 2 of learning JavaScript!
