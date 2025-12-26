@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><i class="fas fa-tasks"></i> Todo List</h1>
+        <p>Stay organized and get things done</p>
+      </div>
+
+      <div class="stats">
+        <div class="total-tasks">Total: <span id="totalCount">0</span></div>
+        <div class="completed-tasks">
+          Completed: <span id="completedCount">0</span>
+        </div>
+        <div class="pending-tasks">
+          Pending: <span id="pendingCount">0</span>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <div class="input-group">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+          />
+          <button id="addBtn"><i class="fas fa-plus"></i> Add Task</button>
+        </div>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Tasks</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <div class="tasks-section">
+        <ul class="task-list" id="taskList">
+          <!-- Tasks will be added here dynamically -->
+          <div class="empty-state" id="emptyState">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>No tasks yet</h3>
+            <p>Add a task using the input above</p>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
