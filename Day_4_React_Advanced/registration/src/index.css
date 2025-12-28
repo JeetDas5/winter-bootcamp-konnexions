@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #6366f1;
+  --color-brand-hover: #4f46e5;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0f172a] text-white selection:bg-indigo-500/30;
+  }
+}
+
+.auth-card {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
+}
+
+.input-field {
+  @apply w-full bg-white/5 border border-white/10 rounded-lg px-10 py-3 text-white placeholder:text-gray-500 outline-hidden focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all duration-300;
+}
+
+.btn-primary {
+  @apply w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform active:scale-[0.98] shadow-lg shadow-indigo-500/25;
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #312e81, #0f172a);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
