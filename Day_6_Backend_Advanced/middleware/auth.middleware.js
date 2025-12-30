@@ -1,5 +1,5 @@
-import User from '../model/user.model.js';
-import { decodeAuthToken } from '../util/jwt.util.js';
+import User from '../models/user.model.js';
+import { decodeAuthToken } from '../utils/jwt.util.js';
 
 const authMiddleware = async (req, res, next) => {
   try {
