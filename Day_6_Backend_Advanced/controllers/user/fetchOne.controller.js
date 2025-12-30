@@ -1,7 +1,7 @@
 import { isValidObjectId } from "mongoose";
 import fetchOneUserService from "../../services/user/fetchOne.service.js";
 
-const fetchOneController = async (req, res, next) => {
+const fetchOneUserController = async (req, res, next) => {
     try {
         const { id: userId } = req.params;
         if (!isValidObjectId(userId)) {
@@ -14,4 +14,4 @@ const fetchOneController = async (req, res, next) => {
     }
 }
 
-export default fetchOneController
+export default fetchOneUserController
