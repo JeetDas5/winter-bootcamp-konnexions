@@ -22,7 +22,7 @@ const signupService = async (userData) => {
         }
 
         const newUser = new User({
-            name: userData.username,
+            name: userData.name,
             email: userData.email,
             password: newPassword
         });
@@ -36,6 +36,7 @@ const signupService = async (userData) => {
         return { user: { id: newUser._id, name: newUser.name, email: newUser.email}, token };
         
     } catch (err) {
+        console.log(err)
         handleServerError(err);
     }
 }
